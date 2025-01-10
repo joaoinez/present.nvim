@@ -11,8 +11,6 @@ jobs:
       matrix:
         os: [ubuntu-22.04]
         rev: [nightly]
-        include:
-          - os: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@v4
@@ -24,8 +22,6 @@ jobs:
 
       - name: Prepare
         run: |
-          rg --version
-
           git clone --depth 1 https://github.com/nvim-lua/plenary.nvim ../plenary.nvim
 
       - name: Run tests
